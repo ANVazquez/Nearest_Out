@@ -24,4 +24,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 #this is going to detect if the arrow hits a wall
 func _on_arrow_body_entered(body):
+	if "Minotaur" in body.name || "grey" in body.name:
+		body.dead()
 	queue_free()
